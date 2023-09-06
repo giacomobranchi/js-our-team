@@ -30,7 +30,7 @@ const members = [
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        photo: 'angela-caroll-chief-editor.jpg.jpg'
+        photo: 'angela-caroll-chief-editor.jpg'
     },
     {
         name: 'Walter Gordon',
@@ -62,21 +62,15 @@ for (let i = 0; i < members.length; i++) {
     const teamMembers = members[i];
     // MILESTONE 2:
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
-    let markup = `<div class="container">
-                    <div class="row">
-                        <div class="col_6 col_md_4">
-                            <div class="card">
-                                <img src="" class="card-img-top" alt="">
-                                <div class="card-body">
-                                <h5 class="card-title">${teamMembers.name} </h5>
-                                <p class="card-text">${teamMembers.role}</p>
-                                <p class="card-text">${teamMembers.photo}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-    document.querySelector('div').innerHTML += markup;
+    let markup = `<div class="col-6 col-md-4 gap-4 py-4">
+    <div class="card">
+    <img src="./assets/img/${teamMembers.photo}" class="card-img-top" alt="">
+    <div class="card-body">
+    <h5 class="card-title">${teamMembers.name} </h5>
+    <p class="card-text">${teamMembers.role}</p>
+    </div>
+    </div>`
+    document.querySelector('.row').innerHTML += markup;
     /* for (const key in teamMembers) {
         console.log(key);
         let member = teamMembers[key]
@@ -88,5 +82,7 @@ for (let i = 0; i < members.length; i++) {
 } */
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
+
+
 // BONUS 2:
 // Organizzare i singoli membri in card/schede
