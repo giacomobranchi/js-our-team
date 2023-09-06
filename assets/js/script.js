@@ -68,19 +68,20 @@ for (let i = 0; i < members.length; i++) {
                             <div class="card">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text"></p>
+                                <h5 class="card-title">${teamMembers.name} </h5>
+                                <p class="card-text">${teamMembers.role}</p>
+                                <p class="card-text">${teamMembers.photo}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>`
     document.querySelector('div').innerHTML += markup;
-    for (const key in teamMembers) {
+    /* for (const key in teamMembers) {
         console.log(key);
         let member = teamMembers[key]
         console.log(member);
-    }
+    } */
 }
 /* for (iterator of members) {
     console.log(iterator);
