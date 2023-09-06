@@ -35,7 +35,7 @@ const members = [
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        photo: 'walter-gordon-office-manager.jpgg'
+        photo: 'walter-gordon-office-manager.jpg'
     },
     {
         name: 'Angela Lopez',
@@ -56,22 +56,35 @@ const members = [
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
+for (let i = 0; i < members.length; i++) {
+    const teamMembers = members[i];
+    // MILESTONE 2:
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    let markup = `<div class="container">
+                    <div class="row">
+                        <div class="col_6 col_md_4">
+                            <div class="card">
+                                <img src="" class="card-img-top" alt="">
+                                <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+    document.querySelector('div').innerHTML += markup;
+    for (const key in teamMembers) {
+        console.log(key);
+        let member = teamMembers[key]
+        console.log(member);
+    }
+}
+/* for (iterator of members) {
+    console.log(iterator);
+} */
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
 // BONUS 2:
